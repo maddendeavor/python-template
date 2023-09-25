@@ -5,9 +5,8 @@
 ######################
 ## directories
 ######################
-.bin/
 .svn/
-[Bb]in/
+*[Bb]in/
 [Dd]ebug/
 gen/
 [Oo]bj/
@@ -15,6 +14,8 @@ gen/
 [Rr]elease/
 *[Ss]ettings/
 [Dd]ata/
+*venv*
+*[Bb]uild*
 
 ######################
 ## temporary files
@@ -113,7 +114,7 @@ __pycache__
 
 # Distribution / packaging
 .Python
-build/
+*[Bb]uild/*
 develop-eggs/
 dist/
 downloads/

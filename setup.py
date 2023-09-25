@@ -1,28 +1,35 @@
-''' setup module
-'''
+from setuptools import setup
 
-from distutils.core import setup
-
-# TEMPLATE
 setup(
     name='python_template',
     version='0.0',
-    description='',
-    long_description=open('README.rst').read(),
+    description='Template project for python projects',
+    long_description=open('README.md').read(),
     author='Christine Madden',
     license=open('LICENSE').read(),
-    author_email='',
+    author_email='christine.m.madden19@gmail.com',
     packages=['project_name'],
     install_requires=[
-        # list other required packages
-        "pylint",
-        "sphinx",
-        "sphinx-readable-theme",
-        "sphinxcontrib-napoleon",
-        "unittest",
-        "black",
-        "flake8"
     ],
+    extras_require={
+            "dev": [
+                "black",  # lint & formatting helper
+                "flake8",  # lint & formatting helper
+                "isort",  # lint & formatting helper
+                "sphinx",  # documentation
+                "sphinx-autoapi",  # documentation
+                "sphinx-mdinclude",  # documentation
+                "sphinx-rtd-theme",  # read-the-docs theme
+                "docstr-coverage",  # doc string coverage
+                "wily",
+                "coverage",
+                "coverage-badge",
+                "docstr-coverage",
+                "pybadges",
+                "pylint",
+                "pytest",
+        ],
+    },
     entry_points={
         'console_scripts':
         [
