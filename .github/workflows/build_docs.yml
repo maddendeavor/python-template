@@ -15,9 +15,9 @@ jobs:
 
       - name: Check out repository code
         uses: actions/checkout@v4
-#        with:
-#          submodules: true
-#          token: ${{ secrets.GITFLOW_PAT }}
+        with:
+          submodules: true
+          token: ${{ secrets.GITFLOW_PAT }}
       - run: echo "The ${{ github.repository }} repository has been cloned to the runner."
       - run: echo "The workflow is now ready to test your code on the runner."
 
@@ -39,7 +39,7 @@ jobs:
           echo "All required dependencies have been installed."
           pip list | grep docstr  # docstr version
 
-      - name: Build PDF document
+      - name: Build HTML & PDF document
         run: |
           cd doc
           # make latexpdf
